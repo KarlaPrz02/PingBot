@@ -4,7 +4,6 @@ from discord.ext import commands
 USER1_ID = USER1
 USER2_ID = USER2
 
-# intents
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True  
@@ -12,7 +11,6 @@ intents.presences = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Slash command 
 @bot.event
 async def on_ready():
     print(f"Connected as {bot.user}")
